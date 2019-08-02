@@ -39,9 +39,9 @@
               <ul class="nav navbar-nav">
                 <li class="active"><a href="#1">INTRO</a></li>
                 <li class=""><a href="#2">Descrittiva</a></li>
-                <li class=""><a href="#3">cap3</a></li>
-                <li class=""><a href="#4">cap4</a></li>
-                <li class=""><a href="#5">cap5</a></li>
+                <li class=""><a href="#3">Fattori di rischio</a></li>
+                <li class=""><a href="#4">Classificazioni</a></li>
+                <li class=""><a href="#5">Conclusioni</a></li>
               </ul>
             </div>
           </div>
@@ -321,6 +321,29 @@
 <br><br>
 <iframe src="plot1.html" style="width:100%;height:400px;"></iframe>
 
+
+<br><br>
+<img src="grafici_vari/scatter_correlazione_distribuzione.png"  height="auto" width="100%">
+
+<br><br>
+<h3>La variabile di risposta e il caso specifico della profondità</h3>
+
+<p>
+
+Le correlazioni tra i giorni di guarigione sia di accesso sia di guariogione hanno tutte lo stesso segno il che implica che le variazioni di giorni vengono influenzate in modo simile tra i diversi regressori.<br>
+Le uniche due variabili che non hanno lo stesso segno sono la cronicità, la profondità e la lesione totale.<br>
+Per quanto riguarda la prima ha senso che nei giorni di accesso abbia una correlazione prossima allo zero e che nei giorni di insorgenza abbia una influenza positiva in quanto la cronicità corrisponde a quanto tempo un paziente ha aspettato prima di farsi curare, quindi naturalmente fa aumentare i giorni di guarigione da quando è sorta ma (almeno in linea generale) la recidività non fa aumentare i giorni necessari per essere guarità post intervento.<br>
+Per quanto riguarda, invece, la profondità notiamo che ha una correlazione negativa con i giorni di guarigione questo significherebbe che all'aumentare della profondità della ferita il paziente guarisce in meno tempo. Questo ovviamente risulta essere inlogico e può essere causato principalmente da due ragioni: la prima può corrispondere ad una relazione inversa tra la profondità e larghezza/lunghezza, ossia più la larghezza/lunghezza aumenta più la profondità sarà minore, ma dalla matrice di correlazione non giungiamo a queste conclusioni quindi siamo costretti a scartare questa prima conlcusione. <br> 
+Un altra possibilità è che non essendoci mezzi adueguati per misurare la profondità di una ferita essa sia stata presa in maniera approssimativa e questo ha portato ad una distorsione della misura.
+<br>
+<br>
+<img src="grafici_vari/hist/Scatter_plot_between_gg.riepit.da.insorgenza_and_profondit...cm..png"  height="auto" width="49%">
+
+<img src="grafici_vari/hist/Scatter_plot_between_gg.riepit..da.accesso_and_profondit...cm..png"  height="auto" width="49%">
+
+<br>
+Osservando i dati ci sembra più plausibile la seconda possibilità questo ci porta ad escludere questa variabile dalla nostra analisi e anche la variabile lesione.totale verrà esclusa in quanto ha al suo interno la profondità.
+</p>
 
 <br><br>
 
@@ -1090,10 +1113,7 @@
   <br><br>
   <iframe src="plot2.html" style="width:100%;height:600px;"></iframe>
 
-
-
-
-
+<br>
   <h1>3. Lesioni</h1>
 
 <h2>Classificazione lesione</h2>
@@ -1597,6 +1617,14 @@
     </tbody>
     </table>
 </div>
+<br><br>
+<img src="grafici_vari/sesso_per_classificazione_barchart3.png"  height="auto" width="100%">
+
+<br><br>
+<br><br>
+<img src="grafici_vari/recidiva_per_classificazione_barchart3.png"  height="auto" width="100%">
+
+<br><br>
   <h2>Sede della lesione</h2>
  
 <div class="tabella">
@@ -1794,8 +1822,14 @@
     </table>
 </div>
 
+<br><br>
+<img src="grafici_vari/sesso_per_sedelesione_barchart.png"  height="auto" width="100%">
 
+<br><br>
+<br><br>
+<img src="grafici_vari/recidiva_per_sedelesione_barchart.png"  height="auto" width="100%">
 
+<br><br>
  </section>
   <!--/ analisi descrittiva-->
 
@@ -1832,41 +1866,46 @@
           </div>
         </div>
       </div>
-<h1>1. Analisi "importance" fattori di rischio</h1>
+    <h1>1. Analisi "importance" fattori di rischio</h1>
 
-<center>
+    <center>
 
-<br>
-<h2>Importanza sui dropout</h2>
-<br>
-<img src="imp1.png">
-<br>
-<h2>Importanza sui giorni di guarigione</h2>
-<br>
-<img src="imp2.png">
-</center>
-<br><br>
-<h1>2. Analisi causa-effetto</h1>
+    <br>
+    <h2>Importanza sui dropout</h2>
+    <br>
+    <img src="imp1.png">
+    <br>
+    <h2>Importanza sui giorni di guarigione</h2>
+    <br>
+    <img src="imp2.png">
+    </center>
+    <br><br>
+    <h1>2. Analisi causa-effetto</h1>
 
-<br><br>
+    <br><br>
 
 
-    </div>
-  </section>
+        </div>
+</section>
   <!--/ fattori di rischio-->
 
 
 
 
-<!--dropout-->
-<section id="4" class="section-padding">
+
+
+
+
+
+<!--Classificazione-->
+ <section id="4" class="section-padding">
     <div class="container">
       <div class="row">
         <div class="col-md-3 col-sm-4 col-xs-12">
           <div class="section-title">
-            <h2 class="head-title lg-line">DROPOUT & <br>Giorni di guarigione</h2>
+            <h2 class="head-title lg-line">Confronto tra classificazione</h2>
             <hr class="botm-line">
-            <p class="sec-para">In questa parte dell'analisi abbiamo analizzato i dati per valutare </p>
+            <p class="sec-para">In questa parte dell'analisi abbiamo analizzato i dati per valutare differiti per quatro diverse categorie di diagnosi:<br>a. Arti inferiori<br>b. LDP<br>c. SSI<br>d. Ulcere diabetiche </p>
             
           </div>
         </div>
@@ -1875,74 +1914,119 @@
             <div class="more-features-box-text">
               <div class="more-features-box-text-icon"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
               <div class="more-features-box-text-description">
-                <h3>Analisi esplorativa (teoria)</h3>
+                <h3>Introduzione</h3>
                </div>
             </div>
             <div class="more-features-box-text">
               <div class="more-features-box-text-icon"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
               <div class="more-features-box-text-description">
-                <h3>Modello descrittivo Dropout</h3>
-              </div>
-            </div>
-            
-            <div class="more-features-box-text">
-              <div class="more-features-box-text-icon"> <i class="fa fa-angle-right" aria-hidden="true"></i> </div>
-              <div class="more-features-box-text-description">
-                <h3>Modello descrittivo Giorni di guarigione</h3>
+                <h3>Analisi Fattori di rischio per ogni classificazione</h3>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <h1>1. Analisi esplorativa (teoria)</h1>
-      <h2>Spiegazione metodo utilizzato</h2>
-      <br>
-      <center>
-          <img src="Alberi_1.jpg">
-          <br>
-          <br>
-          <img src="Alberi_2.jpg">
+    <h1>1. Introduzione</h1>
+
+    <p>Per farci un idea di come le 4 diverse classificazione scelte influenzino i giorni di guarigione abbiamo fatto inizialmente una regressione che ha come unico scopo quello di orientarsi tra i dati, e trarre delle conclusioni di carattere descrittivo.<br>
+Per fare questa regressione abbiamo tenuto dei dati solo le 4 classificazione di interesse:<br>
+
+<center> 
+    <table class='gmisc_table' style='border-collapse: collapse; margin-top: 1em; margin-bottom: 1em;' >
+    <thead>
+    <tr>
+    <th style='border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Classificazione</th>
+    <th style='border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>Num</th>
+    <th style='border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>% droupout</th>
+    <th style='border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>GG di guarigione<br>da accesso</th>
+    <th style='border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>GG di guarigione<br>da insorgenza</th>
+    <th style='border-bottom: 1px solid grey; border-top: 2px solid grey; text-align: center;'>% recidiva</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+    <td style='text-align: center;'>ARTI INFERIORI</td>
+    <td style='text-align: center;'>306</td>
+    <td style='text-align: center;'>0.33</td>
+    <td style='text-align: center;'>97.68</td>
+    <td style='text-align: center;'>392.38</td>
+    <td style='text-align: center;'>0.13</td>
+    </tr>
+    <tr>
+    <td style='text-align: center;'>LDP</td>
+    <td style='text-align: center;'>170</td>
+    <td style='text-align: center;'>0.51</td>
+    <td style='text-align: center;'>106.23</td>
+    <td style='text-align: center;'>321.96</td>
+    <td style='text-align: center;'>0.05</td>
+    </tr>
+    <tr>
+    <td style='text-align: center;'>SSI</td>
+    <td style='text-align: center;'>383</td>
+    <td style='text-align: center;'>0.32</td>
+    <td style='text-align: center;'>70.38</td>
+    <td style='text-align: center;'>128.27</td>
+    <td style='text-align: center;'>0.03</td>
+    </tr>
+    <tr>
+    <td style='border-bottom: 2px solid grey; text-align: center;'>ULCERA DIABETICA</td>
+    <td style='border-bottom: 2px solid grey; text-align: center;'>17</td>
+    <td style='border-bottom: 2px solid grey; text-align: center;'>0.7</td>
+    <td style='border-bottom: 2px solid grey; text-align: center;'>67.2</td>
+    <td style='border-bottom: 2px solid grey; text-align: center;'>167.4</td>
+    <td style='border-bottom: 2px solid grey; text-align: center;'>0</td>
+    </tr>
+    </tbody>
+    </table>
 </center>
-      <br><br>
-      <h1>2. Modello descrittivo Dropout</h1>
-      <center>
+<br>
+Una volta ottenuto questo subset volevamo vedere se c'era una significativa differenza tra i giorni di guarigione nelle diverse classificazioni allora abbiamo deciso di trasformare la variabile classificazione in una dummy e costruire una regressione per valutare se i coefficienti avessere una differenza significativita da zero.
+<br><br>
+<pre>
 
-          <br>
-          <h2>Albero di classificazione</h2>
-          <br>
-          <img src="alberodrop1.png">
-          <br>
-          <h2>Previsioni</h2>
-          <br>
-          <img src="alberodrop2.png">
-          </center>
-          <h3>Commento:</h3>
-          <br><br>
-          <h1>3. Modello descrittivo Giorni di guarigione</h1>
-          <center>
-    
-              <br>
-              <h2>Albero di classificazione</h2>
-              <br>
-              <img src="alberogg1.png">
-              <br>
-              <h2>Previsioni</h2>
-              <br>
-              <img src="alberogg2.png">
-              </center>
-              <h3>Commento:</h3>
-	    
-	    Notiamo come fino ai 40 anni le persone riescono a guarire in modo abbastanza rapido fino a 10 lesioni, mentre oltre i 42 anni e fino ai 60 la capacità di guarire agevolmente alle ferite si riduce fino a 5. In tutti gli altri (oltre i 60 anni e oltre le 5 ferite/10 ferite) casi notiamo una tendenza a prolungarsi del periodo di guarigione.
-          <br><br>
+Call:
+lm(formula = gg.riepit..da.accesso ~ eta + classificazione, data = ds)
 
-    </div>
-  </section>
-  <!--/ dropout-->
+Residuals:
+    Min      1Q  Median      3Q     Max 
+-110.62  -55.91  -25.88   13.93  698.01 
+
+Coefficients:
+                                Estimate Std. Error t value Pr(>|t|)  
+(Intercept)                      56.0967    23.8850   2.349   0.0192 *
+eta                               0.5644     0.3080   1.833   0.0674 .
+classificazioneLDP               11.2943    13.9811   0.808   0.4195  
+classificazioneSSI              -22.2643    10.3218  -2.157   0.0314 *
+classificazioneULCERA DIABETICA -21.8579    48.3206  -0.452   0.6512  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 106.2 on 545 degrees of freedom
+  (326 observations deleted due to missingness)
+Multiple R-squared:  0.02602,	Adjusted R-squared:  0.01887 
+F-statistic:  3.64 on 4 and 545 DF,  p-value: 0.00614
+
+</pre><br>
 
 
+Come possiamo notare dal R-squared in questa regressione mancano molti regressori che possano spiegare in modo più accurato le ragioni di variazioni di giorni di guarigione, ma solo a livello generale questa regressione ci dice che c'è differenza tra le varie classificazione.
+
+<br>
+<br>
+  
+  <iframe src="plot_class.html" style="width:100%;height:600px;"></iframe>
 
 
+N.B. In questa parte non abbiamo indagato le ragioni della differenza tra le 4 classificazioni ma solo valutato che esiste una differenza.
 
+<br><br>
+</p>
+
+    <h1>2. Analisi Fattori di rischio per ogni classificazione</h1>
+
+        </div>
+</section>
+<!--/ Classificazione-->
 
 
 
