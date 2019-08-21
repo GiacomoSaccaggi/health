@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="ApplicazioniLesioni.exe" version="1.0.0.0" publicKeyToken="cfe82e34a55ec685" language="neutral" processorArchitecture="msil" type="win32" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="ApplicazioniLesioni" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="ApplicazioniLesioni.exe" parameters="" />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          Opzioni manifesto di Controllo dell'account utente
+          Per modificare il livello di Controllo dell'account utente Windows sostituire il 
+          nodo requestedExecutionLevel con uno dei seguenti.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         Se si vuole usare Virtualizzazione file system e registro di sistema per la compatibilità 
+         con le versioni precedenti, eliminare il nodo requestedExecutionLevel.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ApplicazioniLesioni.exe" size="302000">
+      <assemblyIdentity name="ApplicazioniLesioni" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>v5tmD0YD4NYHg1GdCg3PXZiXta7XemP54TaDTk1PyI8=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="ApplicazioniLesioni.exe.config" size="188">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>c922zfRb5ORzqEo8SDjt8Mx8lDMhGTWhqKcK/oileDM=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=PC-JACK\gieck" issuerKeyHash="4a5597bd8d7d333d71d2898ab0ccc5b5ddfb7cf9" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>WmVXNJIp82pesk8/wdht0BHvBtZveIxi9RNkWMuWGDo=</DigestValue></Reference></SignedInfo><SignatureValue>pnyHrapdKdVeQ95/EbKNv6Bu02FH/d+Eq7oEaeX3qm8GsIRfh/B9Tje4+kAcadwlNKMm/rdZLBIfH511sHdEbm2m9cRHNSzHkOsPjdOj6ZXZQsBdxTCaRIQFrAJXbwfAwSlRpw/uN1UD8CgOCc3F/vbVq+jCf27ZAFB4tGhsnNs=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>1nAU8p/qZKFq78/SU6WeASxGXSsP1GCgXiPu1jCzCLoZqI5oMyGjAryM1DZZQ4RdnrHMtPtAaq/eB/qWSGcKTukbcThnrNDl3+LI+bqXynaOuVplwlsOAIpyTjtAOiIyEjMbSHM0OjS2qIz0teg/PzRBO42p8PvhS7xREzqBrnk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="3a1896cb586413f5628c786fd606ef11d06dd8c13f4fb25e6af329923457655a" Description="" Url=""><as:assemblyIdentity name="ApplicazioniLesioni.exe" version="1.0.0.0" publicKeyToken="cfe82e34a55ec685" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=PC-JACK\gieck</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>6j/cZ8tEHSKhN1gE4t72gzW67RvkGdA9BtYAKFW2kok=</DigestValue></Reference></SignedInfo><SignatureValue>m+ZhD9ONBaTqWmBMm4+UXMEq788Jzm3V+m/lFMnZYg6s14XpbRyzvVma96onhL+jxNd0zFIsH96+O577Wh/p2AGA7wZSlItlIXjVsrqcxrMRgarIF4e2gUhbtnuI7dXu0se4JvYvEvNpN/u0l3eGfeXRiagjzkDRKOmPU6CQQRY=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>1nAU8p/qZKFq78/SU6WeASxGXSsP1GCgXiPu1jCzCLoZqI5oMyGjAryM1DZZQ4RdnrHMtPtAaq/eB/qWSGcKTukbcThnrNDl3+LI+bqXynaOuVplwlsOAIpyTjtAOiIyEjMbSHM0OjS2qIz0teg/PzRBO42p8PvhS7xREzqBrnk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBzTCCATagAwIBAgIQP/T9rZAYzK5PUN07JYue3zANBgkqhkiG9w0BAQsFADAlMSMwIQYDVQQDHhoAUABDAC0ASgBBAEMASwBcAGcAaQBlAGMAazAeFw0xOTA4MjEwODI5MTBaFw0yMDA4MjAxNDI5MTBaMCUxIzAhBgNVBAMeGgBQAEMALQBKAEEAQwBLAFwAZwBpAGUAYwBrMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDWcBTyn+pkoWrvz9JTpZ4BLEZdKw/UYKBeI+7WMLMIuhmojmgzIaMCvIzUNllDhF2escy0+0Bqr94H+pZIZwpO6RtxOGes0OXf4sj5upfKdo65WmXCWw4AinJOO0A6IjISMxtIczQ6NLaojPS16D8/NEE7janw++FLvFETOoGueQIDAQABMA0GCSqGSIb3DQEBCwUAA4GBAL4qFINO34CKBkS7zswPMr10hnBm09mQ3rxxz40umbopLM+fovaLPLmffVpmNA2Qcc109NPiBxesT/3J1k8QyrSBN23wU7sA2f0w493Tbc/MZ5rtFXRqIF7CGgFiAbNYLgTI50jUtIl8HKLPuHMmdB8uI9cFfMvbRkF71McjnAXw</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
